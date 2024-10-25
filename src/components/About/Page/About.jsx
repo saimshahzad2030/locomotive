@@ -110,20 +110,26 @@ const About = () => {
                 transform: `perspective(${
                   screenWidth > 1300
                     ? 1200
-                    : screenWidth > 1000 && screenWidth < 1301
+                    : screenWidth > 1023 && screenWidth < 1301
                     ? 1200
-                    : screenWidth > 786 && screenWidth < 1001
+                    : screenWidth > 786 && screenWidth < 1024
                     ? 1500
-                    : screenWidth > 400 && screenWidth < 787
+                    : screenWidth > 530 && screenWidth < 787
                     ? 1500
-                    : 2500
+                    : screenWidth > 399 && screenWidth < 531
+                    ? 1800
+                    : 1000
                 }px) rotateY(${currentAngle}deg)`,
               }}
             >
               <div
-                className={`rounded-full flex flex-col items-center justify-center ${styles["center-div"]}`}
+                className={` flex flex-col items-center justify-center ${styles["center-div"]}`}
               >
-                <Image image={LOGO} className={"h-20 w-auto"} />
+                <div
+                  className={`h-40 w-40 flex flex-col items-center justify-center rounded-full overflow-hidden object-cover ${styles["center-div-child"]}`}
+                >
+                  <Image image={LOGO} className={"h-10 w-auto"} />
+                </div>
               </div>
               {slides.map((slide, index) => (
                 <div
@@ -139,15 +145,15 @@ const About = () => {
                     }deg) translateZ(${
                       screenWidth > 1300
                         ? 400
-                        : screenWidth > 1000 && screenWidth < 1301
+                        : screenWidth > 1023 && screenWidth < 1301
                         ? 330
-                        : screenWidth > 768 && screenWidth < 1001
-                        ? 200
+                        : screenWidth > 768 && screenWidth < 1024
+                        ? 300
                         : screenWidth > 530 && screenWidth < 787
-                        ? 200
+                        ? 250
                         : screenWidth > 399 && screenWidth < 531
                         ? 150
-                        : 50
+                        : 130
                     }px)`,
                     backgroundColor:
                       activeSlideIndex === index
@@ -158,11 +164,11 @@ const About = () => {
                   }}
                 >
                   {activeSlideIndex == index && slide.image && (
-                    <div className="flex flex-col items-center justify-center w-full ">
+                    <div className="flex flex-col items-center justify-center w-5/12 ">
                       <img
                         src={LOGO.src}
                         alt={LOGO.alt}
-                        className={"h-auto max-w-10/12"}
+                        className={"h-auto w-8/12"}
                       />
                     </div>
                   )}
@@ -181,9 +187,9 @@ const About = () => {
                   {activeSlideIndex == index && slide.members && (
                     <div className=" flex flex-row items-center justify-evenly mt-4 w-11/12">
                       {slide.members.map((image) => (
-                        <div className="w-8 h-8 rounded-full object-cover overflow-hidden">
+                        <div className="w-6 h-6 rounded-full object-cover overflow-hidden">
                           <Image
-                            className="w-10 h-auto"
+                            className="w-7 sm:w-10 h-auto"
                             image={{ src: image.src, alt: image.alt }}
                           />
                         </div>
@@ -232,13 +238,16 @@ const About = () => {
 
           <button
             id="prevBtn"
-            className={`z-[1000] ${
-              screenWidth > 530 && screenWidth < 679
-                ? "w-[100px]"
-                : screenWidth > 350 && screenWidth < 531
-                ? "w-[70px]"
-                : "w-[50px]"
-            } sm:w-[150px] md:w-[220px] lg:w-[280px] xl:w-[400px] bg-[#e1a80e] bg-opacity-0  absolute left-2 sm:left-10  h-80 nav-button ${
+            className={`
+              border-none
+              outline-none
+              z-[1000] ${
+                screenWidth > 530 && screenWidth < 679
+                  ? "w-[100px]"
+                  : screenWidth > 350 && screenWidth < 531
+                  ? "w-[70px]"
+                  : "w-[50px]"
+              } sm:w-[150px] md:w-[220px] lg:w-[280px] xl:w-[400px] bg-[#e1a80e] bg-opacity-0  absolute left-2 sm:left-10  h-80 nav-button ${
               styles.prevBtn
             }`}
             onClick={rotateSliderPrev}
@@ -247,13 +256,16 @@ const About = () => {
           </button>
           <button
             id="nextBtn"
-            className={`z-[1000] ${
-              screenWidth > 530 && screenWidth < 679
-                ? "w-[100px]"
-                : screenWidth > 350 && screenWidth < 531
-                ? "w-[70px]"
-                : "w-[50px]"
-            } sm:w-[150px] md:w-[180px] lg:w-[330px] xl:w-[440px] bg-[#e1a80e] bg-opacity-0   absolute right-2 sm:right-10  h-80 nav-button ${
+            className={`
+              border-none
+              outline-none
+              z-[1000] ${
+                screenWidth > 530 && screenWidth < 679
+                  ? "w-[100px]"
+                  : screenWidth > 350 && screenWidth < 531
+                  ? "w-[70px]"
+                  : "w-[50px]"
+              } sm:w-[150px] md:w-[180px] lg:w-[330px] xl:w-[440px] bg-[#e1a80e] bg-opacity-0   absolute right-2 sm:right-10  h-80 nav-button ${
               styles.nextBtn
             }`}
             onClick={rotateSliderNext}
