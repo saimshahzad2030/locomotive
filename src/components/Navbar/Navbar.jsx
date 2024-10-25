@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Navbar */}
-      <div className="w-full h-[100px] dark:bg-white bg-[#303e41] dark:text-white text-[#303e41] flex flex-row items-center justify-between px-4">
+      <div className="z-50 fixed w-full h-[100px] dark:bg-white bg-[#303e41] dark:text-white text-[#303e41] flex flex-row items-center justify-between px-4">
         <Link href={"/about"}>
           <Image className={`h-12 w-auto`} image={LOGO} />
         </Link>

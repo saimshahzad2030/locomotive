@@ -89,16 +89,16 @@ const About = () => {
 
   return (
     <div
-      className="flex flex-col items-center w-full"
+      className="flex flex-col items-center w-full pt-24"
       style={{
         backgroundColor: currentBg.bg, // Set the dynamic background color
       }}
     >
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center justify-center w-full mt-2 relative">
-          {/* <h1 className="w-full text-center font-bold text-white text-3xl">
+          <h1 className="w-full text-center font-bold text-slate-900 text-5xl mt-8">
             About Us
-          </h1> */}
+          </h1>
 
           {/* Add blurred background behind the active slide */}
 

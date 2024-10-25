@@ -12,7 +12,7 @@
     position: absolute;
     width: 350px;
     height: 300px;
-    top: 30%;
+    top: 25%;
     left: calc(50% - 200px);
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg); /* Start at 0deg */
