@@ -187,7 +187,7 @@ const About = () => {
                   {activeSlideIndex == index && slide.members && (
                     <div className=" flex flex-row items-center justify-evenly mt-4 w-11/12">
                       {slide.members.map((image) => (
-                        <div className="w-6 h-6 rounded-full object-cover overflow-hidden">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full object-cover overflow-hidden">
                           <Image
                             className="w-7 sm:w-10 h-auto"
                             image={{ src: image.src, alt: image.alt }}
