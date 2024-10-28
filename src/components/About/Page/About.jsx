@@ -90,13 +90,19 @@ const About = () => {
   return (
     <div
       className="flex flex-col items-center w-full pt-24"
+      // style={{
+      //   backgroundColor: currentBg.bg, // Set the dynamic background color
+      // }}
       style={{
-        backgroundColor: currentBg.bg, // Set the dynamic background color
+        backgroundImage: `url(/assets/bg.gif)`, // Use the GIF as background
+        backgroundSize: "cover", // Ensure it covers the entire element
+        backgroundPosition: "center", // Center the GIF
+        backgroundRepeat: "no-repeat", // Avoid repeating the GIF
       }}
     >
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center justify-center w-full mt-2 relative">
-          <h1 className="w-full text-center font-bold text-slate-900 text-5xl mt-8">
+          <h1 className="w-full text-center font-bold text-[#e1a80e] text-5xl mt-8">
             About Us
           </h1>
 
