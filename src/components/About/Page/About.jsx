@@ -42,15 +42,6 @@ quality`,
     description: `Interested in collaborating? Join us on our journey to explore new stories and experiences.`,
     socialLinks: true,
   },
-  //   {
-  //     title: "Executive producer",
-  //     description: `Mariam Al Kaabi is an accomplished executive producer known for her strategic vision and
-  // leadership in film production. With a keen eye for compelling narratives, she plays a pivotal role
-  // in bringing creative projects to life. Al Kaabi's collaborative approach fosters strong partnerships
-  // within the industry, positioning her as a driving force in developing impactful stories that
-  // resonate with audiences. Her commitment to quality and innovation continues to shape the future
-  // of film production.`,
-  //   },
 ];
 const About = () => {
   const totalItems = 4; // Total number of slides
@@ -58,6 +49,8 @@ const About = () => {
   const [currentAngle, setCurrentAngle] = React.useState(0);
   const [screenWidth, setScreenWidth] = React.useState(null);
   const [currentBg, setCurrentBg] = React.useState(colors[1]);
+  const [bgImage, setBgImage] = React.useState("/assets/bg.gif"); // Track background GIF
+
   // Update screen width on resize
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -79,12 +72,18 @@ const About = () => {
     const newBg = colors[Math.floor(Math.random() * colors.length)];
     setCurrentBg(newBg); // Set the new background color
     setCurrentAngle((prevAngle) => prevAngle - anglePerSlide);
+    setBgImage((prevImage) =>
+      prevImage === "/assets/bg.gif" ? "/assets/bg-white.gif" : "/assets/bg.gif"
+    );
   };
 
   const rotateSliderPrev = () => {
     const newBg = colors[Math.floor(Math.random() * colors.length)];
     setCurrentBg(newBg); // Set the new background color
     setCurrentAngle((prevAngle) => prevAngle + anglePerSlide);
+    setBgImage((prevImage) =>
+      prevImage === "/assets/bg.gif" ? "/assets/bg-white.gif" : "/assets/bg.gif"
+    );
   };
 
   return (
@@ -94,18 +93,18 @@ const About = () => {
       //   backgroundColor: currentBg.bg, // Set the dynamic background color
       // }}
       style={{
-        backgroundImage: `url(/assets/bg.gif)`, // Use the GIF as background
+        backgroundImage: `url(${bgImage})`, // Use the GIF as background
         backgroundSize: "cover", // Ensure it covers the entire element
         backgroundPosition: "center", // Center the GIF
         backgroundRepeat: "no-repeat", // Avoid repeating the GIF
       }}
     >
       <div className="container mx-auto w-full">
-        <div className="flex flex-col items-center justify-center w-full mt-2 relative">
+        <div className="min-h-[100vh] flex flex-col items-center w-full mt-2 relative">
           <h1 className="w-full text-center font-bold text-[#e1a80e] text-3xl sm:text-4xl lg:text-5xl mt-8">
             About Us
           </h1>
- 
+
           <div className={`${styles.banner} `}>
             <div
               className={`${styles.slider} `}
