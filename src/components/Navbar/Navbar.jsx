@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Navbar */}
-      <div className="z-50 fixed w-full h-[100px] dark:bg-white bg-[#303e41] dark:text-white text-[#303e41] flex flex-row items-center justify-between px-4">
+      <div className="z-50 fixed w-full h-[100px]  text-white  flex flex-row items-center justify-between px-4">
         <Link href={"/about"}>
           <Image className={`h-12 w-auto`} image={LOGO} />
         </Link>
@@ -48,14 +48,20 @@ const Navbar = () => {
             )}
           </button> */}
           <HAMBURGER
-            className="w-12 h-12 dark:text-[#303e41] text-white cursor-pointer"
+            className="w-12 h-12 dark:text-white text-[#303e41]  cursor-pointer"
             clickHandler={toggleSidebar}
           />
         </div>
       </div>
 
       <div
-        className={`z-50 fixed top-0 right-0 h-screen w-screen dark:bg-white bg-[#303e41] dark:text-[#303e41] text-white transform transition-transform duration-1000 ${
+        style={{
+          backgroundImage: `url(/assets/bg-white.gif)`, // Use the GIF as background
+          backgroundSize: "cover", // Ensure it covers the entire element
+          backgroundPosition: "center", // Center the GIF
+          backgroundRepeat: "no-repeat", // Avoid repeating the GIF
+        }}
+        className={`z-50 fixed top-0 right-0 h-screen w-screen      text-[#303e41] transform transition-transform duration-1000 ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -116,21 +122,21 @@ const Navbar = () => {
             <Link href="https://facebook.com">
               <FACEBOOK
                 className={
-                  "w-8 h-8 text-white dark:text-[#303e41]    transform hover:scale-125 transition-transform duration-200 "
+                  "w-8 h-8 text-[#303e41]     transform hover:scale-125 transition-transform duration-200 "
                 }
               />
             </Link>
             <a href="https://twitter.com" target="_blank">
               <TWITTER
                 className={
-                  "w-8 h-8 text-white dark:text-[#303e41]   transform hover:scale-125 transition-transform duration-200 "
+                  "w-8 h-8 text-[#303e41]   transform hover:scale-125 transition-transform duration-200 "
                 }
               />
             </a>
             <a href="https://instagram.com" target="_blank">
               <INSTA
                 className={
-                  "w-8 h-8  text-white dark:text-[#303e41]  transform hover:scale-125 transition-transform duration-200 "
+                  "w-8 h-8  text-[#303e41]   transform hover:scale-125 transition-transform duration-200 "
                 }
               />
             </a>
@@ -139,7 +145,7 @@ const Navbar = () => {
 
         {/* Close Button */}
         <CROSS
-          className="absolute top-4 right-4 dark:text-[#303e41] text-white w-8 h-8 cursor-pointer"
+          className="absolute top-4 right-4   text-[#303e41] w-8 h-8 cursor-pointer"
           clickHandler={toggleSidebar} // Your close action function
         />
       </div>

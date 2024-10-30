@@ -43,8 +43,7 @@
     backdrop-filter: blur(10px); /* Blur effect */
   }
   /* Apply blur to inactive slides */
-  .inactive-slide {
-    filter: blur(5px); /* Blur effect for inactive slides */
+  .inactive-slide { 
     opacity: 0.5;
     transition: filter 0.5s ease, opacity 0.5s ease;
   }

@@ -128,3 +128,7 @@
     text-wrap: balance;
   }
 }
+
+body {
+  background-color: #303e41;
+}

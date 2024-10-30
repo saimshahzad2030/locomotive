@@ -102,14 +102,11 @@ const About = () => {
     >
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center justify-center w-full mt-2 relative">
-          <h1 className="w-full text-center font-bold text-[#e1a80e] text-5xl mt-8">
+          <h1 className="w-full text-center font-bold text-[#e1a80e] text-3xl sm:text-4xl lg:text-5xl mt-8">
             About Us
           </h1>
-
-          {/* Add blurred background behind the active slide */}
-
+ 
           <div className={`${styles.banner} `}>
-            {/* <div className={`z-[200] ${styles["blurred-background"]}`}></div> */}
             <div
               className={`${styles.slider} `}
               style={{
@@ -124,7 +121,7 @@ const About = () => {
                     ? 1500
                     : screenWidth > 399 && screenWidth < 531
                     ? 1800
-                    : 1000
+                    : 300
                 }px) rotateY(${currentAngle}deg)`,
               }}
             >
@@ -159,7 +156,7 @@ const About = () => {
                         ? 250
                         : screenWidth > 399 && screenWidth < 531
                         ? 150
-                        : 130
+                        : 120
                     }px)`,
                     backgroundColor:
                       activeSlideIndex === index
