@@ -130,5 +130,23 @@
 }
 
 body {
-  background-color: #303e41;
+  /* background-color: #303e41; */
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: white !important; /* Change to your desired active color */
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: white !important; /* Change to your desired color */
+}
+
+/* Additional custom styles for navigation arrows (optional) */
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  font-size: 20px !important; /* Adjust the size of the arrows */
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: white !important; /* Change to your desired active color */
 }

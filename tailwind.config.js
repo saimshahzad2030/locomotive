@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      minHeight: {
+        "screen-minus-100": "calc(100vh - 100px)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

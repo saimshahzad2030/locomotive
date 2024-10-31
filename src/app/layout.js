@@ -32,10 +32,18 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="/public/assets/logo.png" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
       </head>
       <body className="font-regular">
         <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
+      <script
+        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+        async
+      ></script>
     </html>
   );
 }

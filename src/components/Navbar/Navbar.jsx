@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Navbar */}
       <div className="z-50 fixed w-full h-[100px]  text-white  flex flex-row items-center justify-between px-4">
         <Link href={"/about"}>
-          <Image className={`h-12 w-auto`} image={LOGO} />
+          {/* <Image className={`h-12 w-auto`} image={LOGO} /> */}
         </Link>
         <div className={"flex flex-row items-center"}>
           {/* <button
@@ -145,7 +145,7 @@ const Navbar = () => {
 
         {/* Close Button */}
         <CROSS
-          className="absolute top-4 right-4   text-[#303e41] w-8 h-8 cursor-pointer"
+          className="absolute top-8 right-6   text-[#303e41] w-8 h-8 cursor-pointer"
           clickHandler={toggleSidebar} // Your close action function
         />
       </div>
