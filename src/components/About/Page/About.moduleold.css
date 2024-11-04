@@ -1,11 +1,12 @@
-@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+/* 
+
+ @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 .banner{
     width: 100%;
     height: calc(100vh - 100px);
-    text-align: center;
-    /* overflow: hidden; */
+    text-align: center; 
     position: relative; 
 }
 .banner .slider{
@@ -15,27 +16,26 @@
     top: 0%;
     left: calc(50% - 200px);
     transform-style: preserve-3d;
-    transform: perspective(1000px) rotateY(0deg); /* Start at 0deg */
+    transform: perspective(1000px) rotateY(0deg);  
     z-index: 2;
-    transition: transform 1s ease; 
-    /* animation: autoRun 25s linear infinite; */
+    transition: transform 1s ease;  
     z-index: 2;
 }
 .blurred-background {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
-    backdrop-filter: blur(10px); /* Blur effect */
-    z-index: 1; /* Set it behind the slides */
-    pointer-events: none; /* So it doesn't interfere with clicks */
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px);  
+    z-index: 1;  
+    pointer-events: none;  
   }
   
 .center-div{
     position: absolute;
     inset: 0;
    
-    z-index: 1; /* Set it behind the slides */
-    pointer-events: none; /* So it doesn't interfere with clicks */
+    z-index: 1;  
+    pointer-events: none;  
   }
   
   .center-div-child{
@@ -68,8 +68,7 @@
 }
 .banner .content{
     position: absolute;
-    bottom: 0;
-    /* left: 50%; */
+    bottom: 0; 
     transform: translateX(-50%);
     width: min(1400px, 100vw);
     height: max-content;
@@ -202,4 +201,5 @@
     font-size: 24px;
     cursor: pointer;
     z-index: 3;
-}
+} */
+

@@ -15,8 +15,8 @@ export default function AboutPage() {
     >
       <div className="container mx-auto w-full">
         <Navbar />
-        <About />
       </div>
+      <About />
     </div>
   );
 }
