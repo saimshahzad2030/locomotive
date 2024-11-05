@@ -7,14 +7,14 @@ export default function AboutPage() {
     <div
       className="flex flex-col items-center w-full  "
       style={{
-        backgroundImage: `url(/assets/bg.gif)`, // Use the GIF as background
-        backgroundSize: "cover", // Ensure it covers the entire element
-        backgroundPosition: "center", // Center the GIF
-        backgroundRepeat: "no-repeat", // Avoid repeating the GIF
+        backgroundImage: `url(/assets/bg.gif)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="container mx-auto w-full">
-        <Navbar />
+    <Navbar />
       </div>
       <About />
     </div>

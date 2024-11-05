@@ -31,11 +31,11 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Navbar */}
-      <div className="z-50 fixed w-full h-[100px]  text-white  flex flex-row items-center justify-between px-4">
-        <Link href={"/about"}>
+      <div className="top-0 left-0 z-50 fixed w-full h-[100px]  text-white  flex flex-row items-center justify-end px-4">
+        <Link href={"/about"} className="bg-red-400">
           {/* <Image className={`h-12 w-auto`} image={LOGO} /> */}
         </Link>
-        <div className={"flex flex-row items-center"}>
+        <div className={"flex flex-row items-center  "}>
           {/* <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2   text-white dark:text-[#303e41] rounded-full focus:outline-none flex flex-row items-center"

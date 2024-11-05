@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import styles from "./About.module.css";
 import { BTS1, BTS2, BTS3, LOGO } from "@/constants/images";
 import { FACEBOOK, INSTA, TWITTER } from "@/constants/svg";
@@ -47,33 +47,31 @@ const About = () => {
 
   return (
     <div className="flex flex-col items-center w-full justify-center h-[100vh]">
-      <div className={"container"}>
+      <div className={"flex flex-col items-center w-full "}>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={"auto"}
+          slidesPerView={"2"} // Allows dynamic width per slide
+          allowTouchMove={false}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            depth: 100, // Increased depth for more visual layering
+            modifier: 2.5, // Adjust modifier for stronger 3D effect
+            slideShadows: false,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
             clickable: true,
           }}
-          modules={[EffectCoverflow, Pagination]}
-          className={styles.swiper_container}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className={"swiper_container"}
         >
           {slides.map((slide, index) => (
-            <SwiperSlide
-              key={index}
-              className={`${styles.swiperSlide} swiperSlide`}
-            >
+            <SwiperSlide key={index} className={`  swiperSlide`}>
               {slide.image && (
                 <div className="flex flex-col items-center justify-center w-[100px] md:w-[400px]">
                   <img
@@ -98,10 +96,10 @@ const About = () => {
                   ))}
                 </div>
               )}
-              <h1 className="text-[#e1a80e] font-bold text-[10px] mb-1 mt-2 xl:text-[20px] w-full text-center">
+              <h1 className="text-[#e1a80e] font-bold text-[12px] mb-1 mt-2 xl:text-[28px] w-full text-center">
                 {slide.title}
               </h1>
-              <p className="text-center font-normal text-white text-[7px] xl:text-[16px]">
+              <p className="text-center font-normal text-white text-[7px] xl:text-[20px]">
                 {slide.description}
               </p>
               {slide.socialLinks && (
@@ -120,6 +118,8 @@ const About = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="swiper-button-next" />
+        <div className="swiper-button-prev" />
       </div>
     </div>
   );

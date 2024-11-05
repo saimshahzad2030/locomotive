@@ -13,115 +13,7 @@
     --foreground: #ededed;
   }
 }
-/* 
  
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-} */
 
 @layer utilities {
   .text-balance {
@@ -130,72 +22,143 @@
 }
 
 body {
-  /* background-color: #303e41; */
+  
 }
  
 
-.swiperSlide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
-  min-height: 320px;
-  padding: 20px;
+.swiper_container { 
+  width: 70%;
   margin: auto;
-  transition: background-color 0.3s ease;
+  padding: 20px; 
 }
-
-/* Style for the active slide */
-/* .swiperSlide.swiper-slide-active {
-  background-color: #ffd700; /* Front slide color 
-} */
-
-/* Style for the next and previous slides */
-.swiperSlide {
+ 
+.swiperSlide.swiper-slide-active {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
-  min-height: 320px;
-  padding: 20px;
-  margin: auto;
-  transition: all 0.3s ease;
+  transform: scale(1.4);
+  z-index: 2;
 }
-
-/* Style for the active slide */
-/* .swiperSlide.swiper-slide-active {
-  background-color: #ffd700; 
-  transform: scale(1);  
-  opacity: 1;
-} */
-.swiperSlide.swiper-slide-active{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* Style for the next and previous slides */
+ 
 .swiperSlide.swiper-slide-prev,
 .swiperSlide.swiper-slide-next {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffd700; /* Background slide color */
-  transform: scale(0.8); /* Shrink size */
-  opacity: 0.5; /* Make semi-transparent */
+  background-color: #d6b600; 
+  transform: scale(0.5); 
+  opacity: 0.9; 
+  z-index: 1;
 }
 
-/* Hide content for next and previous slides */
 .swiperSlide.swiper-slide-prev *:not(img),
 .swiperSlide.swiper-slide-next *:not(img) {
-  display: none;
+  display: none; 
+}
+ 
+.swiperSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  min-width: 500px;
+  min-height: 520px;
+  background-color: black;
+  border: 1px solid rgb(255, 242, 0);
+  padding: 20px;
+  margin: auto;
+}
+@media screen and (max-width: 1500px) {
+  .swiper_container {
+    width: 90%; /* Wider container on smaller screens */
+  }
+  .swiperSlide {
+    min-width: 300px;
+    min-height: 360px;
+    padding: 15px;
+  }
 }
 
+@media screen and (max-width: 800px) {
+  .swiperSlide {
+    min-width: 250px;
+    min-height: 320px;
+    padding: 10px;
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .swiper_container { 
+    width: 100%; /* Full width on mobile */
+  }
+  .swiperSlide {
+    min-width: 250px;
+    min-height: 300px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .swiper_container { 
+    width: 100%; /* Full width on mobile */
+  }
+  .swiperSlide {
+    min-width: 200px;
+    min-height: 300px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .swiper_container {
+    width: 95%; /* Almost full width for extra padding */
+  }
+  .swiperSlide {
+    min-width: 150px;
+    min-height: 250px;
+    padding: 5px;
+    transform: scale(0.45); /* Reduced scale to fit small screens */
+  }
+  .swiperSlide.swiper-slide-prev,
+  .swiperSlide.swiper-slide-next {
+    transform: scale(0.4); /* Smaller scale for prev and next slides */
+  }
+}
+@media screen and (max-width: 300px) {
+  .swiper_container {
+    width: 90%; /* Almost full width for extra padding */
+  }
+  .swiperSlide {
+    min-width: 130px;
+    min-height: 250px;
+    padding: 5px;
+    transform: scale(0.45); /* Reduced scale to fit small screens */
+  }
+  .swiperSlide.swiper-slide-prev,
+  .swiperSlide.swiper-slide-next {
+    transform: scale(0.4); /* Smaller scale for prev and next slides */
+  }
+}
+
+.swiperSlide img {
+  max-width: 100%; /* Ensure images are responsive on small screens */
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffd700 !important; 
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  right: 10px; 
+}
+
+.swiper-button-prev {
+  left: 10px;  
+}
  
