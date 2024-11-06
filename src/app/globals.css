@@ -80,7 +80,7 @@ body {
 
 @media screen   and (max-width: 2500px) {
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 70px !important;
+    font-size: 60px !important;
     left: 20px;
     
   }
@@ -134,10 +134,21 @@ body {
   }
   .swiperSlide {
     min-width: 250px;
-    max-height : 400px;
+    max-height : 270px;
     padding: 8px;
   }
- 
+  /* .swiperSlide.swiper-slide-prev,
+  .swiperSlide.swiper-slide-next {
+     
+    transform: scale(0.3) !important; 
+    opacity: 0.9; 
+    z-index: 1;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 30px !important;
+    left: 20px;
+    
+  }  */
 }
 
 @media screen and (max-width: 500px) {
@@ -155,6 +166,11 @@ body {
     max-height: 300px;
     padding: 8px;
   }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 40px !important;
+    left: 20px;
+    
+  } 
 }
 @media screen and (max-width: 400px) {
   .swiper_container {
@@ -166,10 +182,17 @@ body {
     padding: 5px;
     transform: scale(0.5); /* Reduced scale to fit small screens */
   }
+  
   .swiperSlide.swiper-slide-prev,
   .swiperSlide.swiper-slide-next {
-    transform: scale(0.9) !important; /* Smaller scale for prev and next slides */
+     
+    transform: scale(0.6) !important;  
   }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 30px !important;
+    left: 20px;
+    
+  } 
 }
 @media screen and (max-width: 300px) {
   .swiper_container {
