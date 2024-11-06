@@ -53,6 +53,7 @@ const About = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
+          speed={1000}
           slidesPerView={"2"} // Allows dynamic width per slide
           allowTouchMove={false}
           coverflowEffect={{

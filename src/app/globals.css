@@ -70,32 +70,62 @@ body {
   justify-content: center;
   border-radius: 20px;
   min-width: 500px;
-  min-height: 520px;
+  max-height: 520px;
   background-color: black;
   border: 1px solid rgb(255, 242, 0);
   padding: 20px;
   overflow: hidden;
   margin: auto;
 }
-@media screen and (max-width: 1500px) {
+
+@media screen   and (max-width: 2500px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 70px !important;
+    left: 20px;
+    
+  }
+  .swiperSlide.swiper-slide-prev,
+  .swiperSlide.swiper-slide-next {
+     
+    transform: scale(0.5) !important; 
+    opacity: 0.9; 
+    z-index: 1;
+  }
+  .swiperSlide {
+    /* background-color: red; */
+    min-width: 300px;
+    max-height: 500px;
+    padding: 15px;
+  }
+}
+@media screen  and (max-width: 1500px) {
   .swiper_container {
     width: 90%; /* Wider container on smaller screens */
   }
   .swiperSlide {
     /* background-color: red; */
     min-width: 300px;
-    min-height: 360px;
+    max-height: 360px;
     padding: 15px;
   }
+ 
 }
-
+ 
 @media screen and (max-width: 800px) {
   .swiperSlide { 
     min-width: 250px;
-    min-height: 320px;
+    max-height: 320px;
     padding: 10px;
     transform: scale(0.9);
   }
+  .swiperSlide.swiper-slide-prev,
+  .swiperSlide.swiper-slide-next {
+     
+    transform: scale(0.7) !important; 
+    opacity: 0.9; 
+    z-index: 1;
+  }
+   
 }
 
 @media screen and (max-width: 600px) {
@@ -104,18 +134,25 @@ body {
   }
   .swiperSlide {
     min-width: 250px;
-    min-height: 300px;
+    max-height : 400px;
     padding: 8px;
   }
+ 
 }
 
 @media screen and (max-width: 500px) {
   .swiper_container { 
+    margin-top: 100px;
     width: 100%; /* Full width on mobile */
+  }
+  .swiper-button-next,
+.swiper-button-prev{ 
+    top: 60% !important;
+    color: white !important; 
   }
   .swiperSlide {
     min-width: 200px;
-    min-height: 300px;
+    max-height: 300px;
     padding: 8px;
   }
 }
@@ -153,10 +190,11 @@ body {
 .swiperSlide img {
   max-width: 100%; /* Ensure images are responsive on small screens */
 }
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #ffd700 !important; 
-  font-size: 24px;
+  font-size: 200px !important;;
   top: 50%;
   transform: translateY(-50%);
 }
