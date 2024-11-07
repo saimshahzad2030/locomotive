@@ -80,9 +80,17 @@ body {
 
 @media screen   and (max-width: 2500px) {
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 60px !important;
-    left: 20px;
-    
+    font-size: 350px !important; 
+    background-color: transparent; 
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 430px !important;  
+  }
+  .swiper-button-next{ 
+    right: 430px !important;
+
   }
   .swiperSlide.swiper-slide-prev,
   .swiperSlide.swiper-slide-next {
@@ -98,6 +106,21 @@ body {
     padding: 15px;
   }
 }
+@media screen   and (max-width: 1900px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 350px !important; 
+    background-color: transparent; 
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 320px !important;  
+  }
+  .swiper-button-next{ 
+    right: 320px !important;
+
+  }
+}
 @media screen  and (max-width: 1500px) {
   .swiper_container {
     width: 90%; /* Wider container on smaller screens */
@@ -108,9 +131,33 @@ body {
     max-height: 360px;
     padding: 15px;
   }
- 
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 350px !important;  
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 150px !important;  
+  }
+  .swiper-button-next{ 
+    right: 150px !important;
+
+  }
 }
- 
+@media screen  and (max-width: 1100px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 290px !important; 
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 100px !important;  
+  }
+  .swiper-button-next{ 
+    right: 100px !important;
+
+  }
+}
 @media screen and (max-width: 800px) {
   .swiperSlide { 
     min-width: 250px;
@@ -124,6 +171,18 @@ body {
     transform: scale(0.7) !important; 
     opacity: 0.9; 
     z-index: 1;
+  } 
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 220px !important; 
+        color: transparent;
+      top: 50% !important;
+    }
+    .swiper-button-prev  { 
+      left: 70px !important;  
+    }
+    .swiper-button-next{ 
+      right: 70px !important;
+   
   }
    
 }
@@ -137,44 +196,49 @@ body {
     max-height : 270px;
     padding: 8px;
   }
-  /* .swiperSlide.swiper-slide-prev,
-  .swiperSlide.swiper-slide-next {
-     
-    transform: scale(0.3) !important; 
-    opacity: 0.9; 
-    z-index: 1;
-  }
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 30px !important;
-    left: 20px;
-    
-  }  */
+    font-size: 160px !important; 
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 30px !important;  
+  }
+  .swiper-button-next{ 
+    right: 30px !important;
+ 
+}
 }
 
 @media screen and (max-width: 500px) {
   .swiper_container { 
-    margin-top: 100px;
+    margin-top: 0px;
     width: 100%; /* Full width on mobile */
   }
-  .swiper-button-next,
-.swiper-button-prev{ 
-    top: 60% !important;
-    color: white !important; 
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 150px !important; 
+    color: transparent;
+    top: 50% !important;
   }
+  .swiper-button-prev  { 
+    left: 30px !important;  
+  }
+  .swiper-button-next{ 
+    right: 30px !important;
+ 
+}
   .swiperSlide {
     min-width: 200px;
     max-height: 300px;
     padding: 8px;
   }
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 40px !important;
-    left: 20px;
-    
-  } 
+   
 }
 @media screen and (max-width: 400px) {
+
   .swiper_container {
     width: 95%; /* Almost full width for extra padding */
+  margin-top: -30px;
   }
   .swiperSlide {
     min-width: 150px;
@@ -189,10 +253,17 @@ body {
     transform: scale(0.6) !important;  
   }
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 30px !important;
-    left: 20px;
-    
-  } 
+    font-size: 150px !important; 
+    color: transparent;
+    top: 50% !important;
+  }
+  .swiper-button-prev  { 
+    left: 20px !important;  
+  }
+  .swiper-button-next{ 
+    right: 20px !important;
+ 
+}
 }
 @media screen and (max-width: 300px) {
   .swiper_container {
