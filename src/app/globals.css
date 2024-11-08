@@ -71,8 +71,10 @@ body {
   border-radius: 20px;
   min-width: 500px;
   max-height: 520px;
-  background-color: black;
-  border: 1px solid rgb(255, 242, 0);
+  /* background-color: black;  */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px); /* Adds a blur effect */
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px;
   overflow: hidden;
   margin: auto;
