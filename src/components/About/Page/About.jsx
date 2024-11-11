@@ -55,11 +55,26 @@ const About = () => {
     // Cleanup the timer when component unmounts
     return () => clearTimeout(timer);
   }, []);
+  const swiperRef = React.useRef(null);
+
+  const handleHoverNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const handleHoverPrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
   return (
     <div className="flex flex-col items-center w-full justify-center h-[100vh]">
       {isReady ? (
         <div className={"flex flex-col items-center w-full "}>
           <Swiper
+            ref={swiperRef}
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
@@ -130,8 +145,16 @@ const About = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-button-next" />
-          <div className="swiper-button-prev" />
+          <div
+            className="swiper-button-next"
+            onMouseEnter={handleHoverNext}
+            onMouseLeave={() => {}}
+          />
+          <div
+            className="swiper-button-prev"
+            onMouseEnter={handleHoverPrev}
+            onMouseLeave={() => {}}
+          />
         </div>
       ) : (
         <Loader color={"#e1a80e"} />
