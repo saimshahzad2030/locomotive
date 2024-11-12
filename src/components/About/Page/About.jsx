@@ -72,7 +72,7 @@ const About = () => {
   return (
     <div className="flex flex-col items-center w-full justify-center h-[100vh]">
       {isReady ? (
-        <div className={"flex flex-col items-center w-full "}>
+        <div className={"flex flex-col items-center w-full  "}>
           <Swiper
             ref={swiperRef}
             effect={"coverflow"}
