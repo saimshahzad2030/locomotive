@@ -43,31 +43,27 @@ body {
   justify-content: center;  
   transform: scale(1.2) !important;
   overflow: visible;
-  z-index: 2;
+  z-index: 2; 
+   
 }
  
 .swiperSlide.swiper-slide-prev,
 .swiperSlide.swiper-slide-next {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #d6b600; 
-  transform: scale(0.9) !important; 
-  opacity: 0.9; 
-  z-index: 1; */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffe343; /* Bright yellow color */
+  background-color: #ffdc14; /* Bright yellow color */
   transform: scale(0.9) !important; 
   opacity: 0.9; 
   z-index: 1;
-  box-shadow: 0 0 15px rgba(255, 219, 18, 0.7), /* Outer soft glow */
-              0 0 30px rgba(255, 223, 42, 0.5), /* Larger blur for glowing effect */
-              0 0 45px rgba(255, 229, 79, 0.3); /* Even larger, lighter shadow */
+  box-shadow: 0 0 15px rgba(255, 217, 4, 0.975), /* Outer soft glow */
+              0 0 30px rgba(255, 217, 4, 0.863), /* Larger blur for glowing effect */
+              0 0 45px rgba(255, 218, 8, 0.838); /* Even larger, lighter shadow */
   border-radius: 20px; /* Optional: keeps corners rounded */
+
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out,box-shadow 0.5s ease-in-out;
 }
 
 .swiperSlide.swiper-slide-prev *:not(img),
