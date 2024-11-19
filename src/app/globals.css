@@ -43,26 +43,31 @@ body {
   transform: scale(1.1) !important;
   overflow: visible;
   z-index: 2; 
+    will-change: transform, opacity, box-shadow; 
    
 }
  
 .swiperSlide.swiper-slide-prev,
 .swiperSlide.swiper-slide-next {
-  
+  will-change: transform, opacity; /* Notify the browser of intended changes */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffdc14; /* Bright yellow color */
+  background-color: #ffdc14;  
   transform: scale(0.6) !important; 
   opacity: 0.9; 
   z-index: 1;
-  box-shadow: 0 0 15px rgba(255, 217, 4, 0.975), /* Outer soft glow */
-              0 0 30px rgba(255, 217, 4, 0.863), /* Larger blur for glowing effect */
-              0 0 45px rgba(255, 218, 8, 0.838); /* Even larger, lighter shadow */
-  border-radius: 20px; /* Optional: keeps corners rounded */
+  /* box-shadow: 0 0 15px rgba(255, 217, 4, 0.975), 
+              0 0 30px rgba(255, 217, 4, 0.863), 
+              0 0 45px rgba(255, 218, 8, 0.838);  */
+              box-shadow: 0 0 20px rgba(255, 217, 4, 0.975);
+  border-radius: 20px; 
 
-  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out,box-shadow 0.5s ease-in-out;
+  transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+            transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+            box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .swiperSlide.swiper-slide-prev *:not(img),
@@ -357,14 +362,14 @@ body {
 @media screen and (max-width: 400px) {
 
   .swiper_container {
-    width: 95%; /* Almost full width for extra padding */
-  margin-top: -30px;
+    width: 95%; 
+    margin-top: -30px;
   }
   .swiperSlide {
     min-width: 150px;
     min-height: 250px;
     padding: 5px;
-    transform: scale(0.5); /* Reduced scale to fit small screens */
+    transform: scale(0.5); 
   }
   
   .swiperSlide.swiper-slide-prev{ 
@@ -400,22 +405,22 @@ body {
 }
 @media screen and (max-width: 300px) {
   .swiper_container {
-    width: 90%; /* Almost full width for extra padding */
+    width: 90%;
   }
   .swiperSlide {
     min-width: 130px;
     min-height: 250px;
     padding: 5px;
-    transform: scale(0.45); /* Reduced scale to fit small screens */
+    transform: scale(0.45); 
   }
   .swiperSlide.swiper-slide-prev,
   .swiperSlide.swiper-slide-next {
-    transform: scale(0.4); /* Smaller scale for prev and next slides */
+    transform: scale(0.4); 
   }
 }
 
 .swiperSlide img {
-  max-width: 100%; /* Ensure images are responsive on small screens */
+  max-width: 100%; 
 }
 
 .swiper-button-next,
